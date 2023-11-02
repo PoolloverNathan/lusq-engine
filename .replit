@@ -1,0 +1,18 @@
+run = "make -k all run"
+
+hidden=["target"]
+
+[nix]
+channel = "stable-22_11"
+
+[packager]
+language = "java"
+
+[packager.features]
+packageSearch = true
+
+[languages.kotlin]
+pattern = "**/*.{kt,kts,java}"
+
+[languages.kotlin.languageServer]
+start = ["kotlin-language-server"]
